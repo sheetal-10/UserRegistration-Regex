@@ -22,5 +22,15 @@ public class UserRegistration {
 		details.setFirstName(scanner.next());
 		Validater.CheckFirstname(details);
 	}
+ 	
+ 	/**
+ 	 * Ability to ask user for his last name
+ 	 * Validates the user input by calling method
+ 	 */
+	public void userLastName() {
+		System.out.println("\nEnter the Last Name :");
+		details.setLastName(scanner.next());
+		Validater.CheckLastname(details);
+	}
 
 }
