@@ -72,4 +72,23 @@ public class Validater {
 			userRegistration.userEmail(); //calling the method to ask user
 		}
 	}
+	
+	/**
+	 * Ability to validate the user Phone Number with the condition
+	 * Condition: Country code followed by 10 digit number
+	 * If it doesn't matches, asks user again to enter the number by calling method
+	 * @param details
+	 */
+	public static void CheckPhoneNumber(Details details ) { 
+		String check="^[9][1][6-9][0-9]{9}$";
+		Pattern pattern = Pattern.compile(check); //Assigning condition to compile
+		Matcher matcher = pattern.matcher(details.getPhoneNumber()); //Checking for Matching
+		boolean result = matcher.matches(); // Match result: True or False
+		if (result) {
+			System.out.println("Phone Number '"+details.getPhoneNumber()+"' is Valid and Saved to details");
+		} else {
+			System.out.println("\nInvalid Phone Number.\nMobile Number is of like Country code followed by 10 digit number");
+			userRegistration.userPhoneNumber(); //calling the method to ask user
+		}
+	}
 }

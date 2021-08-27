@@ -42,4 +42,14 @@ public class UserRegistration {
 		details.setEmail(scanner.next());
 		Validater.CheckEmail(details);
 	}
+	
+	/**
+ 	 * Ability to ask user for his phone number
+ 	 * Validates the user input by calling method
+ 	 */
+ 	public void userPhoneNumber() {
+		System.out.println("\nEnter the Phone Number :");
+		details.setPhoneNumber(scanner.next());
+		Validater.CheckPhoneNumber(details);
+	}
 }

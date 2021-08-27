@@ -18,5 +18,6 @@ public class MainRunner {
 			userRegistration.userFirstName();
 			userRegistration.userLastName();
 			userRegistration.userEmail();
+			userRegistration.userPhoneNumber();
 	}
 }
