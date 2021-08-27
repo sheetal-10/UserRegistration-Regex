@@ -33,4 +33,13 @@ public class UserRegistration {
 		Validater.CheckLastname(details);
 	}
 
+	/**
+ 	 * Ability to ask user for his E-mail
+ 	 * Validates the user input by calling method
+ 	 */
+	public void userEmail() {
+		System.out.println("\nEnter the E-mail :");
+		details.setEmail(scanner.next());
+		Validater.CheckEmail(details);
+	}
 }

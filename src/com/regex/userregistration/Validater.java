@@ -50,4 +50,26 @@ public class Validater {
 			userRegistration.userLastName(); // calling the method to ask user
 		}
 	}
+	
+	/**
+	 * Ability to validate the user E-mail with the conditions
+	 * Condition: 1) Email has 3 mandatory parts (user name, @ , domain name)
+	 * Condition: 2) user name must have min. of 3 character and optional of '.' with 3 characters
+	 * Condition: 3) Domain name must have '@' and then characters of 2-3 and then '.' with 2-3 characters
+	 * Condition: 4) Domain name may contains extra 2-3 characters starting with '.' again
+	 * If it doesn't matches, asks user again to enter the E-mail by calling method
+	 * @param details
+	 */
+	public static void CheckEmail(Details details ) { 
+		String check="^[a-z]+(\\.[a-zA-Z0-9]+)*@[a-z]{2,}\\.[a-z]{2,3}(\\.[a-z]{2,3})*$"; //Condition
+		Pattern pattern = Pattern.compile(check); //Assigning condition to compile
+		Matcher matcher = pattern.matcher(details.getEmail()); //Checking for Matching
+		boolean result = matcher.matches(); // Match result: True or False
+		if (result) {
+			System.out.println("E-mail: '"+details.getEmail()+"' is Valid and Saved to details");
+		} else {
+			System.out.println("\nInvalid E-mail.\nE-mail is of like abc.xyz@bl.co.in");
+			userRegistration.userEmail(); //calling the method to ask user
+		}
+	}
 }
