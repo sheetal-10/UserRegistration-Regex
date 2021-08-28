@@ -52,4 +52,15 @@ public class UserRegistration {
 		details.setPhoneNumber(scanner.next());
 		Validater.CheckPhoneNumber(details);
 	}
+ 	
+ 	/**
+ 	 * Ability to ask user for his Password
+ 	 * Validates the user input by calling method
+ 	 */
+ 	public void userPassword() {
+		System.out.println("\nEnter the Password :");
+		details.setPassword(scanner.next());
+		Validater.CheckPassword(details);
+	}
+
 }

@@ -11,6 +11,7 @@ public class Details {
 	private String lastName;
 	private String email;
 	private String phoneNumber;
+	private String password;
 
 	// Getters and Setters
 	public String getFirstName() {
@@ -43,5 +44,13 @@ public class Details {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

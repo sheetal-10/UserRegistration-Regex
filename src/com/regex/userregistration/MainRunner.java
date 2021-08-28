@@ -19,5 +19,6 @@ public class MainRunner {
 			userRegistration.userLastName();
 			userRegistration.userEmail();
 			userRegistration.userPhoneNumber();
+			userRegistration.userPassword();
 	}
 }
