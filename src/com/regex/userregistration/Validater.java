@@ -96,20 +96,20 @@ public class Validater {
 	 * Ability to validate the user Password with the condition
 	 * Condition: 1) Password should be min. of 8 characters
 	 * Condition: 2) Must have at least one Upper Case
+	 * Condition: 3) Must have at least one Number
 	 * If it doesn't matches, asks user again to enter the password by calling method
 	 * @param details
 	 */
 	public static void CheckPassword(Details details ) { 
-		String check="^(?=.*[a-z])(?=.*[A-Z]).{8,}$"; //Condition
+		String check="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"; //Condition
 		Pattern pattern = Pattern.compile(check); //Assigning condition to compile
 		Matcher matcher = pattern.matcher(details.getPassword()); //Checking for Matching
 		boolean result = matcher.matches(); // Match result: True or False
 		if (result) {
 			System.out.println("Password '"+details.getPassword()+"' is Valid and Saved to details");
 		} else {
-			System.out.println("\nInvalid Password.\nUse 8 or more characters with atleast 1 upper case ");
+			System.out.println("\nInvalid Password.\nUse 8 or more characters with a mix of atleast one Upper case and one number");
 			userRegistration.userPassword(); //calling the method to ask user
 		}
 	}
-
 }
