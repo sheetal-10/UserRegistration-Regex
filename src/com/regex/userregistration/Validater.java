@@ -101,14 +101,14 @@ public class Validater {
 	 * @param details
 	 */
 	public static void CheckPassword(Details details ) { 
-		String check="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"; //Condition
+		String check="^(?=.*[@#$%^&+=])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"; //Condition
 		Pattern pattern = Pattern.compile(check); //Assigning condition to compile
 		Matcher matcher = pattern.matcher(details.getPassword()); //Checking for Matching
 		boolean result = matcher.matches(); // Match result: True or False
 		if (result) {
 			System.out.println("Password '"+details.getPassword()+"' is Valid and Saved to details");
 		} else {
-			System.out.println("\nInvalid Password.\nUse 8 or more characters with a mix of atleast one Upper case and one number");
+			System.out.println("\nInvalid Password.\nUse 8 or more characters with a mix of atleast one Upper case,\none number and one special character");
 			userRegistration.userPassword(); //calling the method to ask user
 		}
 	}
