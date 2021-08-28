@@ -61,7 +61,7 @@ public class Validater {
 	 * @param details
 	 */
 	public static void CheckEmail(Details details ) { 
-		String check="^[a-z]+(\\.[a-zA-Z0-9]+)*@[a-z]{2,}\\.[a-z]{2,3}(\\.[a-z]{2,3})*$"; //Condition
+		String check="^[a-z]+[0-9]*([.+-][a-zA-Z0-9]+){0,1}@[a-z0-9]+\\.[a-z]{2,3}(\\.[a-z]{2,3}){0,1}$"; //Condition
 		Pattern pattern = Pattern.compile(check); //Assigning condition to compile
 		Matcher matcher = pattern.matcher(details.getEmail()); //Checking for Matching
 		boolean result = matcher.matches(); // Match result: True or False
