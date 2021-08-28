@@ -107,7 +107,7 @@ public class Validater {
 		if (result) {
 			System.out.println("Password '"+details.getPassword()+"' is Valid and Saved to details");
 		} else {
-			System.out.println("\nInvalid Password.\nUse 8 or more characters");
+			System.out.println("\nInvalid Password.\nUse 8 or more characters with atleast 1 upper case ");
 			userRegistration.userPassword(); //calling the method to ask user
 		}
 	}
