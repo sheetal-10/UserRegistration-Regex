@@ -58,8 +58,9 @@ static UserRegistration userRegistration = new UserRegistration();
 	 * Condition: 4) Domain name may contains extra 2-3 characters starting with '.' again
 	 * If it doesn't matches, asks user again to enter the E-mail by calling method
 	 * @param details
+	 * @return 
 	 */
-	public static void CheckEmail(Details details ) { 
+	public static boolean CheckEmail(Details details ) { 
 		String check="^[a-z]+[0-9]*([.+-][a-zA-Z0-9]+){0,1}@[a-z0-9]+\\.[a-z]{2,3}(\\.[a-z]{2,3}){0,1}$"; //Condition
 		Pattern pattern = Pattern.compile(check); //Assigning condition to compile
 		Matcher matcher = pattern.matcher(details.getEmail()); //Checking for Matching
@@ -70,6 +71,7 @@ static UserRegistration userRegistration = new UserRegistration();
 			System.out.println("\nInvalid E-mail.\nE-mail is of like abc.xyz@bl.co.in");
 			userRegistration.userEmail(); //calling the method to ask user
 		}
+		return result;
 	}
 	
 	/**
