@@ -1,27 +1,25 @@
 package com.regex;
 
-import java.util.Arrays;
-import java.util.Collection;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 /**
  * JUnit Parameterized Test to validate multiple entry for the Email Address
  * @author sheetal
- * @since 2021-08-29
+ * @since 2021-09-02
  */
-
-@RunWith(Parameterized.class)
 public class UserEmailTest {
 	// variables
-		Details email;
+		String email;
 		boolean expectedOutput;
 
 		// Constructor
-		public UserEmailTest(Details email, boolean expectedOutput) {
+		public UserEmailTest(String email, boolean expectedOutput) {
 			this.email = email;
 			this.expectedOutput = expectedOutput;
 		}
@@ -57,7 +55,7 @@ public class UserEmailTest {
 		@Test
 		public void givenEmail_WithExpectedOutput_ShouldReturnActualResult() {
 			Validater validate = new Validater();
-			boolean actualResult = validate.CheckEmail(email);
+			boolean actualResult = validate.checkEmail(email);
 			Assert.assertEquals(this.expectedOutput, actualResult);
 		}
 

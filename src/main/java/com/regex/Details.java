@@ -3,7 +3,7 @@ package com.regex;
 /**
  * This class is for getters and setters of User Details
  * @author sheetal
- * @since 2021-08-26
+ * @since 2021-09-02
  */
 public class Details {
 	//Variable
