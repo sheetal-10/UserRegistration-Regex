@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @since 2021-09-02
  */
 public class UserRegistration {
-	// Objects
+		// Objects
 		static Scanner scanner = new Scanner(System.in);
 		static Validater validate = new Validater();
 
@@ -52,9 +52,13 @@ public class UserRegistration {
 			output(result);
 			if (result == false) userPassword();
 		}
-		
 		/** Ability to print valid or not based on result */
 		public void output(boolean result) {
-			if (result) System.out.println("Valid Input");
-			else System.out.println("Invalid Input");
-		}}
+			try {
+				if (result) System.out.println("Valid Input");
+				else throw new userException("Invalid Input");
+			} catch (userException | NullPointerException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+}

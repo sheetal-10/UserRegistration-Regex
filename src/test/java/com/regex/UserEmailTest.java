@@ -14,7 +14,7 @@ import java.util.Collection;
  * @since 2021-09-02
  */
 public class UserEmailTest {
-	// variables
+		// variables
 		String email;
 		boolean expectedOutput;
 

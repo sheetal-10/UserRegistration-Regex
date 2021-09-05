@@ -6,7 +6,7 @@ package com.regex;
  * @since 2021-09-02
  */
 public class Details {
-	//Variable
+		//Variable
 		private String firstName;
 		private String lastName;
 		private String email;
